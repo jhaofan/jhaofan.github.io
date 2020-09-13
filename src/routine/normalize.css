@@ -1,0 +1,97 @@
+/* 初始化样式表仅针对会被使用到的标签元素 */
+/* html, body, div, span, a, img, i, input, select, textarea, iframe, video, audio */
+html {
+  /* 格式化行高 */
+  line-height: 1.15;
+  /* 禁用非标准手势, 例如双击缩放, 由此可消除移动端300ms点击延迟 */
+  touch-action: manipulation;
+  /* 针对iOS环境, 防止旋转屏幕方向后改变字体大小 */
+  -webkit-text-size-adjust: 100%;
+  /* 针对iOS环境, 防止点击元素后出现有色背景 */
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  /* 格式化外边距 */
+  margin: 0;
+  /* 格式化字体大小, 消除空白节点带来的影响 */
+  font-size: 0;
+}
+
+a {
+  /* 防止在IE10下, 活动状态出现灰色背景 */
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  /* 去除活动和悬浮状态下的焦点框 */
+  outline: none;
+}
+
+img {
+  /* 针对IE10环境, 且在a标签内, 移除默认边框 */
+  border: none;
+}
+
+input,
+select,
+textarea {
+  /* 格式化外边距 */
+  margin: 0;
+  /* 格式化字体 */
+  font-family: inherit;
+  font-size: inherit;
+  /* 格式化行高 */
+  line-height: inherit;
+  /* 禁用特殊样式 */
+  appearance: none;
+}
+
+input {
+  /* 针对IE环境, 修正属性值 */
+  overflow: visible;
+}
+input::-moz-focus-inner {
+  /* 针对Firefox 4+环境, 移除内边距和边框 */
+  padding: 0;
+  border: none;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  /* 针对Chrome环境, 修正增加和减少按钮的高度 */
+  height: auto;
+}
+[type="checkbox"],
+[type="radio"] {
+  /* 针对IE10环境, 修正属性值 */
+  box-sizing: border-box;
+  /* 针对IE10环境, 移除内边距 */
+  padding: 0;
+}
+::-webkit-input-speech-button {
+  /* 针对Android环境, 移除语言输入按钮 */
+  display: none;
+}
+
+::-ms-clear {
+  /* 针对IE10+环境, 移除清除按钮 */
+  display: none;
+}
+
+select {
+  /* 针对Edge/Firefox/IE环境, 统一该属性无法继承的特性 */
+  text-transform: none;
+}
+
+textarea {
+  /* 针对IE10+环境, 移除垂直滚动条 */
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  /* 针对WebKit环境, 移除滚动条, 请仅在移动端开启 */
+  /* display: none; */
+}
+
+/* 更多可参考https://github.com/necolas/normalize.css */
